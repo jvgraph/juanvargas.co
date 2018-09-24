@@ -23,20 +23,28 @@ class Header extends React.Component {
       nav: false
     }
   }
+  toggleNav = () => {
+    this.setState({
+      nav: !this.state.nav
+    })
+  }
   render() {
     //const {siteTitle} = this.props;
+    const {nav} = this.state;
     return (
       <div className="header--container">
-        <div className="header">
-          <Hambergur/>
-          <h1 style={{
-            margin: 0
-          }}>
+        <div className="header container">
+          <h1 className={`site--brand name`}>
             <Link to="/">
               Juan Vargas
             </Link>
           </h1>
-          <Navigation/>
+          <Hambergur toggleNav={this.toggleNav} isNavOpen={nav}/>
+          {
+            nav && (
+              <Navigation isNavOpen={nav}/>
+            )
+          }
         </div>
       </div>
     )

@@ -4,7 +4,7 @@ import {graphql} from 'gatsby'
 import Layout from '../components/layout'
 const IndexPage = ({data}) => (
   <Layout>
-    <div className='about--section'>
+    <div className='about--section section'>
           <h1 className="page--title">
             Hello
             <span>.</span>
@@ -23,7 +23,6 @@ const IndexPage = ({data}) => (
           </li>
         ))}
     </ul>
-    <Link to="/page-2/">Go to page 2</Link>
   </div>
   </Layout>
 )

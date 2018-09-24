@@ -1,5 +1,11 @@
 .header--container{
-  background-color: #eee;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 44px;
+  width: 100%;
+  z-index: 99;
   .header{
     display: flex;
     justify-content: space-between;

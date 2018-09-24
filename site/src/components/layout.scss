@@ -1,3 +1,4 @@
+@import "page-transition";
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -206,6 +207,7 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+  padding-top: 50px;
 }
 img {
   max-width: 100%;

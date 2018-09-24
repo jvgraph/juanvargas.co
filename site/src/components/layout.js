@@ -2,10 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import PageTransition from 'gatsby-plugin-page-transitions';
 import Loadable from 'react-loadable';
 
 //import Header from './header'
-import './layout.css'
+import './layout.scss'
 import "./fonts.scss"
 const Loading = () => <div />;
 
@@ -37,17 +38,12 @@ const Layout = ({ children }) => (
           <html lang="en"/>
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
-        {console.log(data)}
-        <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
-          }}
-        >
-          {children}
-        </div>
+
+          <PageTransition>
+            <div className="container page">
+            {children}
+            </div>
+          </PageTransition> 
       </>
     )}
   />
