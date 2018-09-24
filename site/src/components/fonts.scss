@@ -25,23 +25,28 @@ body {
   text-transform: uppercase;
   line-height: 1;
   color: black;
+
   span {
     color: red;
   }
 }
+
 .container {
   margin: 0 auto;
-  max-width: 95rem;
+  max-width: 1400px;
   padding: 0 30px;
+
   @media (min-width: 768px) {
     padding: 0 20px;
   }
 }
+
 .site--brand {
   margin: 0;
   font-family: 'Avenir Next';
   font-weight: 400;
   letter-spacing: 0.125rem;
+
   a {
     text-decoration: none;
     text-transform: uppercase;
@@ -51,8 +56,11 @@ body {
 }
 
 .page {
-  padding: 2.6rem 0px;
+  padding-top: 2.6rem;
+  padding-bottom: 2.6rem;
+
   @media (min-width: 768px) {
-    padding: 4rem 0px;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 }

@@ -30,6 +30,10 @@
     "projects": {
       "collection": "project",
       "via": "author"
+    },
+    "copy": {
+      "default": "",
+      "type": "text"
     }
   }
 }

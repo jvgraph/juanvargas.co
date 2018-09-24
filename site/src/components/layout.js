@@ -2,18 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import PageTransition from 'gatsby-plugin-page-transitions';
-import Loadable from 'react-loadable';
+import PageTransition from 'gatsby-plugin-page-transitions'
+import Loadable from 'react-loadable'
 
 //import Header from './header'
 import './layout.scss'
-import "./fonts.scss"
-const Loading = () => <div />;
+import './fonts.scss'
+const Loading = () => <div />
 
 const Header = Loadable({
-  loader: () => import("./header" /* webpackChunkName: "header" */),
-  loading: Loading
+  loader: () => import('./header' /* webpackChunkName: "header" */),
+  loading: Loading,
 })
+
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -26,7 +27,6 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      
       <>
         <Helmet
           title={data.site.siteMetadata.title}
@@ -35,15 +35,13 @@ const Layout = ({ children }) => (
             { name: 'keywords', content: 'sample, something' },
           ]}
         >
-          <html lang="en"/>
+          <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
 
-          <PageTransition>
-            <div className="container page">
-            {children}
-            </div>
-          </PageTransition> 
+        <PageTransition>
+          <div className="container page">{children}</div>
+        </PageTransition>
       </>
     )}
   />

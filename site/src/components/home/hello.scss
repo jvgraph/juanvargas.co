@@ -1,7 +1,25 @@
-.hello{
-  h2{
+.hello {
+  h2 {
     font-family: 'Avenir Next';
     font-weight: 400;
     font-size: calc(30.5 / 16 * 1rem);
+  }
+
+  .blink {
+    animation: blink-animation 1.2s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1.2s steps(5, start) infinite;
+    transition: all 300ms;
+  }
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
   }
 }
