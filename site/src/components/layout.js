@@ -6,9 +6,10 @@ import Loadable from 'react-loadable';
 
 //import Header from './header'
 import './layout.css'
+import "./fonts.scss"
 const Loading = () => <div />;
 
-const Header =Loadable({
+const Header = Loadable({
   loader: () => import("./header" /* webpackChunkName: "header" */),
   loading: Loading
 })
@@ -36,6 +37,7 @@ const Layout = ({ children }) => (
           <html lang="en"/>
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
+        {console.log(data)}
         <div
           style={{
             margin: '0 auto',

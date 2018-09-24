@@ -1,9 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Juan Vargas',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    {
+      resolve: "gatsby-plugin-sass"
+    },
     {
       resolve: `gatsby-source-strapi`,
       options: {

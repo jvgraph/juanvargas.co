@@ -1,0 +1,27 @@
+@font-face{
+    font-family:"Avenir Next Bold";
+    font-weight: 900;
+    src:url("./fonts/AvenirNext-Heavy.woff2") format("woff2"),url("./fonts/AvenirNext-Heavy.woff") format("woff");
+}
+
+@font-face{
+  font-family: "Avenir Next";
+  font-weight: 400;
+  src:url("./fonts/AvenirNextLTPro-Regular.woff2") format("woff2"),url("./fonts/AvenirNextLTPro-Regular.woff") format("woff");
+}
+
+body{
+  font-family: "Avenir Next";
+  font-weight: 400;
+  font-size: calc(17.5 / 16 * 1rem);
+}
+
+.page--title{
+  font-family:"Avenir Next Bold";
+    font-weight: 900;
+    font-size: calc(9rem + .525vw);
+    text-transform: uppercase;
+    span{
+      color: red;
+    }
+}

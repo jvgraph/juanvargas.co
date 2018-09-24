@@ -1,39 +1,46 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import {Link} from 'gatsby'
 import Loadable from 'react-loadable';
-const Loading = () => <div />
-const Navigation = Loadable({
-  loader: () => import("./Navigation" /* webpackChunkName: "navigation" */),
+import PropTypes from 'prop-types'
+import "./header.scss";
+const Loading = () => <div/>;
+const Hambergur = Loadable({
+  loader: () => import ("./hamburger"/* webpackChunkName: "hamburger" */),
   loading: Loading
-})
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          HEADER TEST
-        </Link>
-      </h1>
-      <Navigation />
-    </div>
-  </div>
-)
+});
+const Navigation = Loadable({
+  loader: () => import ("./Navigation" /* webpackChunkName: "navigation" */),
+  loading: Loading
+});
+
+class Header extends React.Component {
+  static propTypes = {
+    siteTitle: PropTypes.string
+  }
+  constructor(props) {
+    super(props);
+    this.state = {
+      nav: false
+    }
+  }
+  render() {
+    //const {siteTitle} = this.props;
+    return (
+      <div className="header--container">
+        <div className="header">
+          <Hambergur/>
+          <h1 style={{
+            margin: 0
+          }}>
+            <Link to="/">
+              Juan Vargas
+            </Link>
+          </h1>
+          <Navigation/>
+        </div>
+      </div>
+    )
+  }
+}
 
 export default Header
