@@ -1,12 +1,35 @@
-.navigation--container{
-  position: absolute;
-  nav{
-    .menu{
+.navigation--container {
+  position: fixed;
+  z-index: 89;
+  top: 44px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 44px);
+  background-color: white;
+  nav {
+    height: 100%;
+    padding-top: 6vw;
+    .menu {
       margin: 0;
       padding: 0;
       list-style: none;
+      height: 100%;
       display: flex;
       justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      .menu--item {
+        font-family: 'Avenir Next Bold';
+        font-weight: 900;
+        font-size: calc(4.4rem + 0.525vw);
+        text-transform: uppercase;
+        line-height: 1.2;
+        .menu--link {
+          text-transform: uppercase;
+          text-decoration: none;
+          color: rgba(0, 0, 0, 0.8);
+        }
+      }
     }
   }
 }

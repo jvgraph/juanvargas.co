@@ -7,11 +7,11 @@ class Navigation extends Component {
       <div className={`navigation--container`}>
         <nav className={`navigation`}>
           <ul className={`menu container`}>
-            <li>
-              <Link to='/about'>about</Link>
+            <li className={`menu--item`}>
+              <Link className={`menu--link`} to='/about'>about</Link>
             </li>
-            <li>work</li>
-            <li>contact</li>
+            <li className={`menu--item`}>work</li>
+            <li className={`menu--item`}>contact</li>
           </ul>
         </nav>
       </div>
