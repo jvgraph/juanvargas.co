@@ -2,14 +2,10 @@ import React from 'react'
 import Link from 'gatsby-link'
 import {graphql} from 'gatsby'
 import Layout from '../components/layout'
+import Hello from "../components/home/Hello"
 const IndexPage = ({data}) => (
   <Layout>
-    <div className='about--section section'>
-          <h1 className="page--title">
-            Hello
-            <span>.</span>
-          </h1>
-        </div>
+    <Hello />
     <div>
     <ul>
       {data
