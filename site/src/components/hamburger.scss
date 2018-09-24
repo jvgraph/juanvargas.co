@@ -2,7 +2,6 @@
 	flex:0 0 auto;
 	width:40px;
 	height:40px;
-	border:1px solid rgb(15,15,15);
 	cursor:pointer;
 	position:relative;
 }
@@ -14,9 +13,9 @@
 }
 .hamburger span{
 	display:block;
-	width:18px;
+	width:30px;
 	height:2px;
-	margin-bottom:3px;
+	margin-bottom:7px;
 	overflow:hidden;
 	position:relative;
 }

@@ -5,8 +5,8 @@ class Navigation extends Component {
   render() {
     return (
       <div className={`navigation--container`}>
-        <nav>
-          <ul>
+        <nav className={`navigation`}>
+          <ul className={`menu container`}>
             <li>
               <Link to='/about'>about</Link>
             </li>

@@ -21,7 +21,16 @@ body{
     font-weight: 900;
     font-size: calc(9rem + .525vw);
     text-transform: uppercase;
+    line-height: 1;
+    color: black;
     span{
       color: red;
     }
+}
+.container{
+  max-width: 95rem;
+  padding: 0 30px;
+  @media (min-width: 768px){
+    padding: 0 20px;
+  }
 }

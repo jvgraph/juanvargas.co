@@ -4,18 +4,21 @@ import {graphql} from 'gatsby'
 import Layout from '../components/layout'
 const IndexPage = ({data}) => (
   <Layout>
+    <div className='about--section'>
+          <h1 className="page--title">
+            Hello
+            <span>.</span>
+          </h1>
+        </div>
     <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
     <ul>
       {data
         .allStrapiProject
-        .edges
-        .map(document => (
-          <li key={document.node.id}>
+        .edges.filter(project => project)
+        .map(project => (
+          <li key={project.node.id}>
             <h2>
-              <Link to={`/${document.node.Title.toLowerCase().replace(/ /g, '-')}`}>{document.node.Title}</Link>
+              <Link to={`/${project.node.Title.toLowerCase().replace(/ /g, '-')}`}>{project.node.Title}</Link>
             </h2>
           </li>
         ))}
