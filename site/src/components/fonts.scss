@@ -21,20 +21,42 @@ body {
 .page--title {
   font-family: 'Avenir Next Bold';
   font-weight: 900;
-  font-size: calc(9rem + 0.525vw);
   text-transform: uppercase;
   line-height: 1;
   color: black;
+  letter-spacing: 0.178rem;
+  font-size: calc(3.6rem + 0.525vw);
 
-  span {
+  &.hello {
+    text-indent: -8px;
+  }
+
+  .blink {
     color: red;
+  }
+
+  @media (min-width:768px) {
+    font-size: calc(4rem + 0.525vw);
+
+    &.hello {
+      font-size: calc(6rem + 0.525vw);
+    }
+  }
+
+  @media (min-width:1000px) {
+    &.hello {
+      font-size: calc(9rem + 0.525vw);
+    }
+
+    font-size: calc(6rem + 0.525vw);
+
   }
 }
 
 .container {
   margin: 0 auto;
   max-width: 1400px;
-  padding: 0 30px;
+  padding: 0 60px;
 
   @media (min-width: 768px) {
     padding: 0 20px;

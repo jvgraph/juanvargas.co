@@ -6,8 +6,8 @@ class Hello extends Component {
     return (
       <div className={`hello section`}>
         <div className="about--section section">
-          <h1 className="page--title">
-            Hello
+          <h1 className="page--title hello">
+            <span>Hello</span>
             <span className={`blink`}>_</span>
           </h1>
           <div className="copy">
