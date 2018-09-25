@@ -25,7 +25,7 @@ body {
   line-height: 1;
   color: black;
   letter-spacing: 0.178rem;
-  font-size: calc(3.6rem + 0.525vw);
+  font-size: calc(3.1rem + 0.525vw);
 
   &.hello {
     text-indent: -10px;
@@ -36,7 +36,7 @@ body {
   }
 
   @media (min-width:768px) {
-    font-size: calc(4rem + 0.525vw);
+    font-size: calc(3.5rem + 0.525vw);
 
     &.hello {
       font-size: calc(6rem + 0.525vw);
@@ -48,7 +48,7 @@ body {
       font-size: calc(9rem + 0.525vw);
     }
 
-    font-size: calc(6rem + 0.525vw);
+    font-size: calc(5rem + 0.525vw);
 
   }
 }

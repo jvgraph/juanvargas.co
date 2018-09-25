@@ -6,10 +6,10 @@ class Hello extends Component {
     return (
       <div className={`hello section`}>
         <div className="about--section section">
-          <h1 className="page--title hello">
+          <div className="page--title hello">
             <span>Hello</span>
             <span className={`blink`}>_</span>
-          </h1>
+          </div>
           <div className="copy">
             <h2>
               My name is Juan Vargas, a web developer based in New York City.

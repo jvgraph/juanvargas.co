@@ -442,10 +442,25 @@ blockquote {
   margin-right: 1.45rem;
   margin-top: 0;
   padding-bottom: 0;
-  padding-left: 0;
+  padding-left: calc(4px + 1.125vw);
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  position: relative;
+  color: rgba(black, 0.4);
+  line-height: 1.6;
+  &::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 5px;
+    background-color: #eee;
+    height: 100%;
+    left: 0;
+  }
+  .name{
+    color: rgba(black, 0.4)
+  }
 }
 form {
   margin-left: 0;

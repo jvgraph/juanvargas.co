@@ -15,12 +15,6 @@ module.exports = {
         // Possibility to login with a strapi user, when content types are not publically available (optional).
       },
     },
-    {
-      resolve: 'gatsby-plugin-page-transitions',
-      options: {
-        transitionTime: 500
-      }
-    },
     'gatsby-plugin-offline',
   ],
 }
