@@ -1,0 +1,13 @@
+.home--section {
+  &-project {
+    ul {
+      margin: 0;
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

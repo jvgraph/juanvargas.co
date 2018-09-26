@@ -40,7 +40,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     // Create pages for each project.
     result.data.allStrapiProject.edges.forEach(({ node }) => {
       createPage({
-        path: `/${node.Title.toLowerCase().replace(/ /g, '-')}`,
+        path: `/work/${node.Title.toLowerCase().replace(/ /g, '-')}`,
         component: path.resolve(`src/templates/project.js`),
         context: {
           id: node.id,
