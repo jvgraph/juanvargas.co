@@ -13,6 +13,7 @@ const Hello = Loadable({
 const IndexPage = ({ data }) => (
   <Layout className={`home`}>
     <Hello />
+    {console.log(data)}
     <div className="home--section home--section-project">
       <ul>
         {data.allStrapiProject.edges
@@ -20,11 +21,14 @@ const IndexPage = ({ data }) => (
           .slice(0, 3)
           .map(project => (
             <li key={project.node.id}>
-              <img
-                src={require('../images/test-img.jpg')}
-                alt={project.node.Title}
-                draggable={false}
-              />
+              <div className="image--wrap">
+                <div className="image" style={{
+                  backgroundImage: `url(${project.node.image !== null ? project.node.image.url : require('../images/test-img.jpg')})`,
+                  backgroundRepeat: "no-repeat"
+                }}>
+                  <img src={project.node.image !== null ? project.node.image.url : require('../images/test-img.jpg')} alt={project.node.Title} style={{display:"none"}}/>
+                </div>
+              </div>
               <h2>
                 <Link
                   to={`/work/${project.node.Title.toLowerCase().replace(

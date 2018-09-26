@@ -634,6 +634,10 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+a{
+  text-decoration: none;
+  color: rgba(black,0.8);
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;

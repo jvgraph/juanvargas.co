@@ -8,6 +8,22 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
+      li{
+        width: 100%;
+        @media (min-width:768px){
+          width: calc(50% - 20px);
+        }
+        @media (min-width: 1000px){
+          width: calc(33.3333% - 20px);
+        }
+        .image--wrap{
+          width: 100%;
+          .image{
+            padding-top: 67%;
+            background-size: cover;
+          }
+        }
+      }
     }
   }
 }
