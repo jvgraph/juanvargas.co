@@ -8,8 +8,12 @@ import Loadable from 'react-loadable'
 //import Header from './header'
 import './layout.scss'
 import './fonts.scss'
-const Loading = () => <div />
 
+const Loading = () => <div />
+const Footer = Loadable({
+  loader: () => import('./footer'  /* webpackChunkName: "footer" */),
+  loading: Loading
+})
 const Header = Loadable({
   loader: () => import('./header' /* webpackChunkName: "header" */),
   loading: Loading,
@@ -40,6 +44,7 @@ const Layout = ({ children }) => (
         <Header siteTitle={data.site.siteMetadata.title} />
 
           <div className="container page">{children}</div>
+        <Footer />
       </>
     )}
   />

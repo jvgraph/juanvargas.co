@@ -13,8 +13,10 @@ const Hello = Loadable({
 const IndexPage = ({ data }) => (
   <Layout className={`home`}>
     <Hello />
-    {console.log(data)}
     <div className="home--section home--section-project">
+      <div className="section--title">
+        <h2>{`recent propjects`}</h2>
+      </div>
       <ul>
         {data.allStrapiProject.edges
           .filter(project => project)

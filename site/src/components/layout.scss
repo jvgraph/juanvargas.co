@@ -643,3 +643,13 @@ a{
     font-size: 100%;
   }
 }
+.section--title{
+  padding: calc(30px + 1.125vw) 0 calc(10px + 1.125vw);
+  h2{
+    margin: 0;
+    font-family: 'Avenir Next Bold';
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: calc(24px + 2.275vw);
+  }
+}
